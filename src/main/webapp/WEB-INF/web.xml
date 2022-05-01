@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                                http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+            id="WebApp_ID" version="3.1">
+  <servlet>
+    <servlet-name>Accueil</servlet-name>
+    <servlet-class>servlets.Accueil</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Accueil</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ListeVilles</servlet-name>
+    <servlet-class>servlets.ListeVilles</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListeVilles</servlet-name>
+    <url-pattern>/listeVilles</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>PageVille</servlet-name>
+    <servlet-class>servlets.PageVille</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PageVille</servlet-name>
+    <url-pattern>/pageVille</url-pattern>
+  </servlet-mapping>
+  
+  
+  <jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <include-prelude>/WEB-INF/taglibs.jsp</include-prelude>
+        </jsp-property-group>
+    </jsp-config>
+</web-app>
